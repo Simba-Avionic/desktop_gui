@@ -1,1 +1,1 @@
-# template
+# Dekstop GUI app
