@@ -1,11 +1,10 @@
 import unittest
 import sys
-from pathlib import Path
 import struct
+import os
 
 # Dodanie katalogu nadrzędnego do ścieżki
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
 from some_ip_header import SomeIPHeader
 
 class TestSomeIpHeader(unittest.TestCase):

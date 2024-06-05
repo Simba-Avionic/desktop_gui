@@ -1,8 +1,8 @@
 import unittest
 import sys
-from pathlib import Path
+import os
 
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
 
 from data import Data
 

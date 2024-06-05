@@ -178,7 +178,7 @@ class App(tk.Tk):
 
     def _save_to_file(self):
         timestamp = datetime.datetime.now()
-        filename = f"data_{timestamp.hour}_{timestamp.minute}_{timestamp.second}.csv"
+        filename = f"../data_{timestamp.hour}_{timestamp.minute}_{timestamp.second}.csv"
         with open(file=filename, mode='w', encoding='UTF-8') as csvFile:
             writer = csv.writer(csvFile, delimiter=",")
             writer.writerow(['TIMESTAMP', 'TEMPERATURE_UP', 'TEMPERATURE_DOWN', 'TEMPERATURE_MIDDLE', 'TANK_PRESSURE', 'JET_PRESSURE', 'PRESSURE_DIFFERENCE', 'MAIN_VALVE', 'VENT'])

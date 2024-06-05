@@ -1,12 +1,12 @@
 import unittest
-from data_reader import DataReader
 from unittest.mock import MagicMock, patch
 
 import sys
-from pathlib import Path
+import os
 
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
 
+from data_reader import DataReader
 
 class TestDataReader(unittest.TestCase):
     def test_init(self):
